@@ -12,3 +12,9 @@ $fa-font-path: "../webfonts" !default;
 h1 {
     color: $text-color;
 }
+
+nav {
+    color: white;
+    background-color: black;
+    box-shadow: 0px 0px 10px white;
+}
