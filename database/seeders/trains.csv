@@ -1,0 +1,11 @@
+Azienda,Stazione di partenza,Stazione di arrivo,Ora di partenza,Ora di arrivo,Codice Treno,Numero Carrozze,In orario,Cancellato
+Trenitalia,Napoli Centrale,Milano Centrale,08:30:00,10:30:00,TRE123,10,1,0
+Trenitalia,Roma Termini,Venezia Santa Lucia,09:15:00,11:45:00,IC456,8,1,0
+Italo,Firenze Santa Maria Novella,Torino Porta Nuova,10:00:00,12:30:00,ES789,12,1,0
+Trenitalia,Bologna Centrale,Bari Centrale,11:30:00,14:00:00,RV987,9,1,0
+Italo,Napoli Centrale,Torino Porta Nuova,12:45:00,15:15:00,IC654,11,0,0
+Trenitalia,Milano Centrale,Venezia Santa Lucia,14:00:00,16:30:00,ES321,7,1,1
+Italo,Roma Termini,Firenze Santa Maria Novella,15:15:00,17:00:00,IC123,6,1,0
+Trenitalia,Bologna Centrale,Milano Centrale,16:30:00,18:00:00,RV456,10,1,1
+Italo,Napoli Centrale,Roma Termini,17:45:00,19:15:00,ES987,8,0,0
+Trenitalia,Milano Centrale,Bologna Centrale,19:00:00,20:30:00,IC321,9,1,0

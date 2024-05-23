@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Train;
 use Faker\Generator as Faker;
+
 class TrainsTableSeeder extends Seeder
 {
     /**
@@ -15,18 +16,38 @@ class TrainsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i = 0; $i < 10; $i++) {
-            $new_train = new Train();
-            $new_train->azienda = $faker->company();
-            $new_train->stazione_di_partenza = $faker->city();
-            $new_train->stazione_di_arrivo = $faker->city();
-            $new_train->ora_di_partenza = $faker->time('H:i');
-            $new_train->ora_di_arrivo = $faker->time('H:i');
-            $new_train->codice_treno = $faker->bothify('####');
-            $new_train->numero_carrozze = $faker->randomDigit();
-            $new_train->in_orario = $faker->boolean();
-            $new_train->cancellato = $faker->boolean();
-            $new_train->save();
+        $path = __DIR__ . "/trains.csv";
+        $trains_csv = fopen($path, "r");
+        if ($trains_csv === false) {
+            exit("Cannot open $path");
+        }
+
+
+        $data = [];
+        while ($row = fgetcsv($trains_csv)) {
+            $data[] = $row;
+        }
+
+        foreach ($data as $index => $train) {
+            if($index !== 0) {
+
+                $new_train = new Train();
+                $new_train->azienda = $train[0];
+                $new_train->stazione_di_partenza = $train[1];
+                $new_train->stazione_di_arrivo = $train[2];
+                $new_train->ora_di_partenza = $train[3];
+                $new_train->ora_di_arrivo = $train[4];
+                $new_train->codice_treno = $train[5];
+                $new_train->numero_carrozze = $train[6];
+                $new_train->in_orario = $train[7];
+                $new_train->cancellato = $train[8];
+                $new_train->save();
+
+
+            }
+
+
+
         }
     }
 }
