@@ -1,4 +1,4 @@
-@use './partials/variables' as *;
+@use "./partials/variables" as *;
 
 $fa-font-path: "../webfonts" !default;
 
@@ -7,7 +7,7 @@ $fa-font-path: "../webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 h1 {
     color: $text-color;
@@ -18,20 +18,32 @@ nav {
     background-color: black;
     box-shadow: 0px 0px 10px white;
 }
-main{
-    height: calc(100vh - 100px);
+main {
+    height: calc(100vh - 131px);
+
+    #homeView {
+        width: 400px;
+        height: calc(100vh - 132px);
+        overflow: hidden;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 }
 
-footer{
+footer {
     height: 90px;
     background-image: url(https://previews.123rf.com/images/cherezoff/cherezoff1508/cherezoff150800195/44446074-lungo-treno-con-strisce-su-sfondo-bianco-isolato-vista-dall-alto-e-laterale.jpg);
     background-repeat: no-repeat;
     background-position-y: -107px;
     background-position-x: center;
-   box-shadow: 10px 10px 20px 10px red;
-   a{
-    text-decoration: none;
-    color: black;
-   }
+    box-shadow: 0px 0px 20px 7px red;
+    position: fixed;
 
+    width: 100%;
+    a {
+        text-decoration: none;
+        color: black;
+    }
 }

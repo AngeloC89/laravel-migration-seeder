@@ -4,9 +4,9 @@
 
 @section('content')
 <main>
-    <div class="d-flex">
+    <div id="homeView" class="d-flex flex-column  justify-content-between ">
         @foreach ($trains as $train)
-            <div class="card" style="width: 18rem;">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title text-uppercase ">{{ $train->azienda }}</h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary">Partenza: {{ $train->stazione_di_partenza }} h:
@@ -18,8 +18,9 @@
                     <p class="card-text">N. carrozze: {{ $train->numero_carrozze }}</p>
                     <p class="card-text">In orario: {{ $train->in_orario }}</p>
                     <p class="card-text">Cancellato: {{ $train->cancellato }}</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <div><a href="#" class="card-link">Dettagli</a>
+                    <a href="#" class="card-link">Compra</a></div>
+                    
                 </div>
             </div>
         @endforeach
