@@ -16,16 +16,18 @@ class TrainsTableSeeder extends Seeder
      */
     public function run()
     {
-        $new_train = new Train();
-        $new_train->azienda = 'Trenitalia';
-        $new_train->stazione_di_partenza = 'Napoli';
-        $new_train->stazione_di_arrivo = 'Milano';
-        $new_train->ora_di_partenza = '08:30:00';
-        $new_train->ora_di_arrivo = '10:30:00';
-        $new_train->codice_treno = 'TRE123';
-        $new_train->numero_carrozze = 100;
-        $new_train->in_orario = true;
-        $new_train->cancellato = false;
-        $new_train->save();
+        for ($i = 0; $i < 10; $i++) {
+            $new_train = new Train();
+            $new_train->azienda = 'Trenitalia';
+            $new_train->stazione_di_partenza = 'Napoli';
+            $new_train->stazione_di_arrivo = 'Milano';
+            $new_train->ora_di_partenza = '08:30:00';
+            $new_train->ora_di_arrivo = '10:30:00';
+            $new_train->codice_treno = 'TRE123';
+            $new_train->numero_carrozze = 100;
+            $new_train->in_orario = true;
+            $new_train->cancellato = false;
+            $new_train->save();
+        }
     }
 }
