@@ -13,7 +13,7 @@ class TrainController extends Controller
 
         //$trains = Train::all();
         //dd($trains);
-        $trains = Train::where("ora_di_partenza", '>=', '16:10' . '')->get();
+        $trains = Train::where("ora_di_partenza", '>=', '16:10')->get();
         return view('home', compact('trains'));
     }
 

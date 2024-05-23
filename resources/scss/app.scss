@@ -18,3 +18,20 @@ nav {
     background-color: black;
     box-shadow: 0px 0px 10px white;
 }
+main{
+    height: calc(100vh - 100px);
+}
+
+footer{
+    height: 90px;
+    background-image: url(https://previews.123rf.com/images/cherezoff/cherezoff1508/cherezoff150800195/44446074-lungo-treno-con-strisce-su-sfondo-bianco-isolato-vista-dall-alto-e-laterale.jpg);
+    background-repeat: no-repeat;
+    background-position-y: -107px;
+    background-position-x: center;
+   box-shadow: 10px 10px 20px 10px red;
+   a{
+    text-decoration: none;
+    color: black;
+   }
+
+}
